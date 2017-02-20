@@ -1,0 +1,10 @@
+admin_painting:
+    resource: "@AdminBundle/Resources/config/routing/painting.yml"
+    prefix:   /painting
+admin_post:
+    resource: "@AdminBundle/Resources/config/routing/post.yml"
+    prefix:   /post
+admin_become_admin:
+    path:     /become-admin
+    defaults: { _controller: "AdminBundle:Admin:becomeAdmin" }
+

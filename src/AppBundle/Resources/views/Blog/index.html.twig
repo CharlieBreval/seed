@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+        <!-- BLOG SECTION -->
+        <section id="blog">
+            <div class="section-inner clearfix">
+
+            <div id="blog-grid" class="masonry blog-entries masonry-spaced clearfix" data-maxitemwidth="370">
+                {% for post in posts %}
+                    <div class="blog-entry blog-masonry-entry masonry-item">
+                        <div class="blog-media" {# data-posttype="Video" #}>
+                            <a href="{{ path('app_blog_show', {'slug':post.slug})}}" class="transition"><img src="{{ asset(post.thumbnail )}}" alt="Seo Image Name"></a>
+                        </div>
+
+                        <div class="blog-content">
+                            <div class="blog-headline">
+                                <span class="time">{{ post.createdAt|date('Y-m-d')}}</span>
+                                <h5 class="post-name"><a href="{{ path('app_blog_show', {'slug':post.slug})}}" class="transition">{{ post.title }}</a></h5>
+                            </div>
+                            <a href="{{ path('app_blog_show', {'slug':post.slug})}}" class="read-more transition">Read More</a>
+                        </div>
+                    </div> <!-- END .blog-masonry-entry-->
+                {% endfor %}
+
+                </div> <!-- END #blog-entries -->
+
+            </div> <!-- END .section-inner-->
+        </section> <!-- END SECTION #blog-->
+        <!-- BLOG SECTION -->
+{% endblock %}

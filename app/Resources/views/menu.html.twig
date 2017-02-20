@@ -1,0 +1,22 @@
+<div class="menu right-float clearfix">
+    <a href="#" class="open-nav"><span></span></a>
+    <nav id="main-nav" class="text-light">
+        <div class="nav-logo"><img src="{{ asset('files/uploads/pond-logo-light.png') }}" alt="Logo"></div>
+        <div class="nav-inner">
+        <ul>
+            {% for item in menu.items %}
+                <li {% if currentRoute == item.route %}class="current-menu-item"{% endif %}>
+                    <a href="{{ path(item.route) }}" data-bigletter="{{ item.big_letter }}">{{ item.label }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+        </div>
+        <div class="nav-social">
+            <ul class="socialmedia-widget social-share">
+                <li class="facebook"><a target="_blank" href="https://www.facebook.com/charlie.breval"></a></li>
+                <li class="instagram"><a target="_blank" href="https://www.instagram.com/charlie_breval"></a></li>
+            </ul>
+        </div>
+        <div class="nav-bg"></div>
+    </nav>
+</div>

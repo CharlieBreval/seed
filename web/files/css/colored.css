@@ -1,0 +1,18 @@
+/*-----------------------------------------------------------------------------------
+	
+	COLORED STYLE
+	
+-----------------------------------------------------------------------------------*/
+
+.separator span, .separator-small span { background: #5acae6 !important; }
+.colored { color: #5acae6; }
+p a:hover:after { background: #5acae6; }
+.pace .pace-progress { background: #5acae6;}
+[data-bigletter]:before { color: #5acae6; }
+.visible[data-bigletter]:before { opacity: 0.2; filter: alpha(opacity=20); -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=20)"; }
+nav#main-nav .nav-inner ul li:hover > a, nav#main-nav .nav-inner ul li.current-menu-item > a { color: #5acae6; }
+nav#main-nav [data-bigletter]:before { color: #ffffff; }
+.skill .skill-bar .skill-active { background: #5acae6; }
+footer #backtotop:after { background: #5acae6; }
+.filter li a:after { background: #5acae6; }
+figure.imgoverlay.overlay-border > a { border-color: #5acae6; }

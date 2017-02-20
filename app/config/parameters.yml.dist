@@ -1,0 +1,33 @@
+# This file is auto-generated during the composer install
+parameters:
+    database_host: 127.0.0.1
+    database_port: null
+    database_name: symfony
+    database_user: root
+    database_password: root
+    mailer_transport: smtp
+    mailer_host: 127.0.0.1
+    mailer_user: null
+    mailer_password: null
+    secret: 1c4f9510024a62e27f3695bd4089a522c22fda61
+
+    app_menu:
+        items:
+            - route: app_home
+              label: Home
+              big_letter: H
+            - route: app_gallery
+              label: Gallery
+              big_letter: G
+            - route: app_about
+              label: About
+              big_letter: A
+            # - route: app_videos
+            #   label: Videos
+            #   big_letter: V
+            - route: app_blog_index
+              label: Blog
+              big_letter: B
+            - route: app_contact
+              label: Contact
+              big_letter: C

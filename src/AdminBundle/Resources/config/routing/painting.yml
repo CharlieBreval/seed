@@ -1,0 +1,24 @@
+painting_index:
+    path:     /
+    defaults: { _controller: "AdminBundle:Painting:index" }
+    methods:  GET
+
+painting_show:
+    path:     /{id}/show
+    defaults: { _controller: "AdminBundle:Painting:show" }
+    methods:  GET
+
+painting_new:
+    path:     /new
+    defaults: { _controller: "AdminBundle:Painting:new" }
+    methods:  [GET, POST]
+
+painting_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "AdminBundle:Painting:edit" }
+    methods:  [GET, POST]
+
+painting_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "AdminBundle:Painting:delete" }
+    methods:  DELETE

@@ -1,0 +1,27 @@
+app_home:
+    path:      /
+    defaults:  { _controller: AppBundle:Home:index }
+
+app_gallery:
+    path:     /gallery
+    defaults: { _controller: AppBundle:Gallery:index }
+
+app_blog_index:
+    path:     /blog
+    defaults: { _controller: AppBundle:Blog:index }
+
+app_about:
+    path:     /about-me
+    defaults: { _controller: AppBundle:About:index }
+
+app_videos:
+    path:     /videos
+    defaults: { _controller: AppBundle:Video:index }
+
+app_contact:
+    path:     /contact
+    defaults: { _controller: AppBundle:Contact:index }
+
+app_blog_show:
+    path:     /blog/{slug}
+    defaults: { _controller: AppBundle:Blog:show }

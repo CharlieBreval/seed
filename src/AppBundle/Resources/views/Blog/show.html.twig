@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    <!-- PAGE TITLE -->
+    <section id="page-title" class="full-height text-light parallax-section" data-parallax-image="{{ asset(post.cover) }}">
+        <div class="section-inner wrapper align-center">
+
+            <span class="time">{{ post.createdAt|date('Y-m-d')}}</span>
+            <h4 class="post-name title-minimal"><strong>{{ post.title }}</strong></h4>
+
+        </div>
+    </section>
+    <!-- PAGE TITLE -->
+{% endblock %}
+{% block body %}
+            <section id="blog-single">
+                <div class="section-inner wrapper-small clearfix">
+
+                    {{ post.body|raw }}
+
+                    <div class="spacer spacer-big"></div> <!-- adding spacing for the footer section -->
+
+                    <!-- Single Pagination -->
+                    <ul class="single-pagination fixed-pagination">
+                        {% if nextPost %}
+                            <li class="next"><a href="{{ path('app_blog_show', {'slug':nextPost.slug})}}" class="transition" data-name="{{ nextPost.title }}">
+                            <i class="pagination-icon"></i> Next article <i class="pagination-icon"></i></a></li>
+                        {% endif %}
+
+                        {% if previousPost %}
+                            <li class="prev"><a href="{{ path('app_blog_show', {'slug':previousPost.slug})}}" class="transition" data-name="{{ previousPost.title }}">
+                            <i class="pagination-icon"></i> Previous article <i class="pagination-icon"></i></a></li>
+                        {% endif %}
+                    </ul>
+
+                </div> <!-- END .section-inner-->
+            </section> <!-- END SECTION #blog-->
+            <!-- BLOG SINGLE SECTION -->
+{% endblock %}

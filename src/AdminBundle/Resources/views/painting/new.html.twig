@@ -1,0 +1,16 @@
+{% extends 'AdminBundle::base.html.twig' %}
+
+{% block body %}
+    <h3>Painting creation</h3>
+
+    {{ form_start(form) }}
+        {{ form_widget(form) }}
+        <input class='btn btn-success' type="submit" value="Create" />
+    {{ form_end(form) }}
+
+    <ul>
+        <li>
+            <a href="{{ path('painting_index') }}">Back to the list</a>
+        </li>
+    </ul>
+{% endblock %}

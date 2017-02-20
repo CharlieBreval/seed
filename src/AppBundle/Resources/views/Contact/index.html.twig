@@ -1,0 +1,65 @@
+{% extends 'base.html.twig' %}
+{% block flash %}
+{% endblock %}
+{% block body %}
+    <!-- CONTACT SECTION -->
+    <section id="contact">
+        <div class="section-inner">
+
+            <!-- Contact form -->
+            <div class="wrapper-small">
+                <div class="main-title align-center">
+                    <h5 class="alttitle title-minimal"><strong>Tell me anything</strong></h5>
+                </div>
+
+                {% for flash_message in app.session.flashBag.get('success') %}
+                    <div class="flash-success">
+                        <i class="fa fa-check"></i> {{ flash_message }}
+                    </div>
+                {% endfor %}
+
+                {% for flash_message in app.session.flashBag.get('error') %}
+                    <div class="flash-error">
+                        {{ flash_message }}
+                    </div>
+                {% endfor %}
+
+                <form id="contact-form" class="checkform" action="" method="POST" >
+
+                    <div class="form-row clearfix">
+                        <label for="name" class="req">Name *</label>
+                        <input type="text" name="name" class="name" id="name" value="" placeholder="Name" />
+                    </div>
+
+                    <div class="form-row clearfix">
+                        <label for="email" class="req">Email *</label>
+                        <input type="text" name="email" class="email" id="email" value="" placeholder="Email"/>
+                    </div>
+
+                    <div class="form-row clearfix textbox">
+                        <label for="message" class="req">Message *</label>
+                        <textarea name="message" class="message" id="message" rows="15" cols="50" placeholder="Message"></textarea>
+                    </div>
+
+                    <div id="form-note">
+                        <div class="alert alert-error">
+                            <strong>Error</strong>: Please check your entries!
+                        </div>
+                    </div>
+
+                    <div class="form-row form-submit">
+                        <input type="submit" name="submit_form" class="submit" value="Send" />
+                    </div>
+
+                    <input type="hidden" name="subject" value="charliebreval.com - contact" />
+                    <input type="hidden" name="fields" value="name,email,message," />
+                    <input type="hidden" name="sendto" value="charliebreval@yahoo.fr" />
+                </form>
+            </div>
+            <!-- Contact form -->
+
+
+        </div>
+    </section>
+    <!-- CONTACT SECTION -->
+{% endblock %}

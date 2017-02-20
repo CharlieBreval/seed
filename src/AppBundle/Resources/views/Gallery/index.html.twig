@@ -1,0 +1,39 @@
+{% extends "::base.html.twig" %}
+
+{% block body %}
+    <!-- GALLERY SECTION -->
+    <section id="gallery" class="notoppadding">
+        <div class="section-inner">
+        <!-- I choosed notoppadding in order to manage the spacing with the 'spacer' element. See below. -->
+            {% for section in sections %}
+            {% for key, section in sections %}
+            <div class="wrapper">
+                <div class="spacer spacer-medium"></div>
+                <div class="main-title wrapper align-center">
+                    <h4 class="title-minimal" data-bigletter="P"><strong>{{ key }}</strong></h4>
+                </div>
+                <div class="spacer spacer-medium"></div>
+            </div>
+
+
+            <div id="gallery-grid-portrait" class="masonry gallery-entries clearfix" data-maxitemwidth="800">
+                {% for painting in section %}
+                    <div class="masonry-item">
+                        <div class="imgoverlay overlay-dark overlay-transparent name-hidden">
+                            <div class="overlaycaption">
+                                <h5 class="overlay-name title-minimal"><strong>{{ painting.title }}</strong></h5>
+                                <div class="separator-small"><span></span></div>
+                                <h6 class="alttitle">Oil on canvas</h6>
+                            </div>
+                            <a href="{{ painting.image }}" class="openfancybox" rel="gallery1"><img src="{{ painting.image}}" alt="SEO IMAGE NAME"></a>
+                            <img src="{{ painting.thumbnail }}" alt="SEO IMAGE NAME">
+                        </div>
+
+                    </div>
+                {% endfor %}
+            </div> <!-- END .masonry -->
+            {% endfor %}
+            {% endfor %}
+        </div>
+    </section>
+{% endblock %}
