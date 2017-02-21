@@ -1,0 +1,18 @@
+.bordered #bodyborder-top.fancybox-margin,
+.bordered #bodyborder-bottom.fancybox-margin,
+.bordered #bodyborder-left.fancybox-margin,
+.bordered #bodyborder-right.fancybox-margin {
+    background-color: #333333;
+}
+
+
+.loading-end.bordered #bodyborder-top,
+.loading-end.bordered #bodyborder-bottom,
+.loading-end.bordered #bodyborder-left,
+.loading-end.bordered #bodyborder-right {
+    -webkit-transition: all 0.2s 0.3s ease;
+    -moz-transition: all 0.2s 0.3s ease;
+    -o-transition: all 0.2s 0.3s ease;
+    -ms-transition: all 0.2s 0.3s ease;
+    transition: all 0.2s 0.3s ease;
+}
