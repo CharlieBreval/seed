@@ -30,7 +30,7 @@ set :log_path, "var/logs"
 set :cache_path, "var/cache"
 
 set :symfony_console_path, "bin/console"
-set :symfony_console_flags, "--env=prod --no-debug"
+set :symfony_console_flags, "--no-debug"
 
 # Remove app_dev.php during deployment, other files in web/ can be specified here
 set :controllers_to_clear, ["app_*.php"]
