@@ -35,7 +35,7 @@ module.exports = function(grunt) {
           },
           target: {
             files: {
-              'web/compiled/app/libs.min.css': [
+              'web/files/css/compiled.min.css': [
                     'web/files/css/style.css',
                     'web/files/css/colored.css',
                     'web/files/css/owl.carousel.css',
