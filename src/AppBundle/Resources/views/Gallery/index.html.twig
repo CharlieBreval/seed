@@ -6,18 +6,17 @@
         <div class="section-inner">
         <!-- I choosed notoppadding in order to manage the spacing with the 'spacer' element. See below. -->
             {% for section in sections %}
-            {% for key, section in sections %}
             <div class="wrapper">
                 <div class="spacer spacer-small"></div>
                 <div class="main-title wrapper align-center">
-                    <h4 class="title-minimal" data-bigletter="P"><strong>{{ key }}</strong></h4>
+                    <h4 class="title-minimal" data-bigletter="P"><strong>{{ section.name }}</strong></h4>
                 </div>
                 <div class="spacer spacer-small"></div>
             </div>
 
 
             <div id="gallery-grid-portrait" class="masonry gallery-entries clearfix" data-maxitemwidth="800">
-                {% for painting in section %}
+                {% for painting in section.paintings %}
                     <div class="masonry-item">
                         <div class="imgoverlay overlay-dark overlay-transparent name-hidden">
                             <div class="overlaycaption">
@@ -32,7 +31,6 @@
                     </div>
                 {% endfor %}
             </div> <!-- END .masonry -->
-            {% endfor %}
             {% endfor %}
         </div>
     </section>

@@ -17,7 +17,9 @@ class GalleryController extends Controller
         $sections = [];
 
         foreach ($results as $key => $painting) {
-            $sections[$painting->getCreatedAt()->format('Y')][] = $painting;
+            $category = $painting->getCreatedAt()->format('Y');
+            $sections[$category]['name'] = $painting->getCreatedAt()->format('Y');
+            $sections[$category]['paintings'][] = $painting;
         }
 
         return $this->render('AppBundle:Gallery:index.html.twig', [
