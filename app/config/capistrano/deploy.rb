@@ -37,7 +37,7 @@ set :controllers_to_clear, ["app_*.php"]
 
 # asset management
 set :assets_install_path, "web"
-set :assets_install_flags,  '--symlink'
+set :assets_install_flags,  ''
 
 # Share files/directories between releases
 set :linked_files, ["app/config/parameters.yml"]
@@ -45,9 +45,8 @@ set :linked_dirs, ["var/logs","web/img","web/videos"]
 
 # Set correct permissions between releases, this is turned off by default
 set :file_permissions_paths, ["var"]
-set :permission_method, false
 
 #before 'deploy:updated', 'build:bootstrap'
 after 'deploy:updated', 'symfony:assets:install'
 after 'deploy:finishing', 'deploy:cleanup'
-
+before "deploy:updated", "deploy:set_permissions:chmod"

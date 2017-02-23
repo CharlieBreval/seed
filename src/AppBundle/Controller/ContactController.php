@@ -4,9 +4,16 @@ namespace AppBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 
 class ContactController extends Controller
 {
+    /**
+     * Display the contact form
+     *
+     * @param  Request $request
+     * @return Response           [description]
+     */
     public function indexAction(Request $request)
     {
         if ($request->getMethod() === 'POST') {
@@ -60,8 +67,6 @@ class ContactController extends Controller
                 );
             }
         }
-
-
 
         return $this->render('AppBundle:Contact:index.html.twig');
     }

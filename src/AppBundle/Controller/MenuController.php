@@ -8,6 +8,12 @@ use Symfony\Component\HttpFoundation\Request;
 
 class MenuController extends Controller
 {
+    /**
+     * Action : To display the menu
+     *
+     * @param  Request $request
+     * @return Response
+     */
     public function indexAction(Request $request)
     {
         $stack = $this->get('request_stack');

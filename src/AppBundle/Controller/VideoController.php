@@ -8,9 +8,14 @@ use Symfony\Component\HttpFoundation\Request;
 
 class VideoController extends Controller
 {
+    /**
+     * Action : List all videos
+     *
+     * @param  Request $request [description]
+     * @return [type]           [description]
+     */
     public function indexAction(Request $request)
     {
-        return $this->render('AppBundle:Video:index.html.twig', [
-        ]);
+        return $this->render('AppBundle:Video:index.html.twig', []);
     }
 }

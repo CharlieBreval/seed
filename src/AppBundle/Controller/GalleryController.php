@@ -6,6 +6,11 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 class GalleryController extends Controller
 {
+    /**
+     * Action : List all paintings
+     *
+     * @return Response
+     */
     public function indexAction()
     {
         $results = $this->getDoctrine()->getRepository('AdminBundle:Painting')->findAll();
@@ -15,9 +20,8 @@ class GalleryController extends Controller
             $sections[$painting->getCreatedAt()->format('Y')][] = $painting;
         }
 
-        return $this->render('AppBundle:Gallery:index.html.twig', array(
+        return $this->render('AppBundle:Gallery:index.html.twig', [
             'sections' => $sections
-        ));
+        ]);
     }
-
 }

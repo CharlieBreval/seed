@@ -6,17 +6,25 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 class BlogController extends Controller
 {
+    /**
+     * Action : List all blog posts
+     */
     public function indexAction()
     {
-
         $posts = $this->getDoctrine()->getRepository('AdminBundle:Post')
             ->findBy([], ['createdAt' => 'ASC']);
 
-        return $this->render('AppBundle:Blog:index.html.twig', array(
+        return $this->render('AppBundle:Blog:index.html.twig', [
             'posts' => $posts
-        ));
+        ]);
     }
 
+    /**
+     * Action : Show a blog post
+     *
+     * @param  string $slug
+     * @return Response
+     */
     public function showAction($slug)
     {
         $post = $this->getDoctrine()->getRepository('AdminBundle:Post')->findOneBySlug($slug);
@@ -43,11 +51,11 @@ class BlogController extends Controller
             }
         }
 
-        return $this->render('AppBundle:Blog:show.html.twig', array(
+        return $this->render('AppBundle:Blog:show.html.twig', [
             'post' => $post,
             'nextPost' => $nextPost,
             'previousPost' => $previousPost
-        ));
+        ]);
     }
 
 }

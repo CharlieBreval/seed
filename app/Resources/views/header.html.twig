@@ -5,8 +5,12 @@
        <!-- DEFAULT HEADER CONTENT -->
         <div class="default-header-content">
             <div id="logo" class="left-float">
-                <a id="default-logo" class="logotype" href="{{ path('app_home')}}"><img src="{{ asset('files/uploads/pond-logo-light.png') }}" alt="Logo"></a>
-                <a id="fixed-logo" class="logotype" href="{{ path('app_home')}}"><img src="{{ asset('files/uploads/pond-logo.png') }}" alt="Logo"></a>
+                <a id="default-logo" class="logotype" href="{{ path('app_home')}}">
+                    <img src="{{ asset('files/uploads/pond-logo-light.png') }}" alt="Logo">
+                </a>
+                <a id="fixed-logo" class="logotype" href="{{ path('app_home')}}">
+                    <img src="{{ asset('files/uploads/logo.png') }}" alt="Logo">
+                </a>
             </div>
 
             {{ render(controller('AppBundle:Menu:index',{})) }}

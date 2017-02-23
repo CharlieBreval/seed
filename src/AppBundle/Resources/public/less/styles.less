@@ -1,0 +1,95 @@
+.tp-caption{
+    text-align: center;
+    
+    strong {
+        font-family: 'Playfair Display', serif;
+        font-size: 60%;
+        display: inline-block;
+        line-height: 60px;
+        font-weight: normal;
+        opacity: 0.6;
+        letter-spacing: 6px;
+        text-transform: uppercase;
+    }
+}
+
+a.btn-ghost, .btn-ghost {
+  margin-right: 1em; /* remove this while use*/
+  margin-bottom: 1em; /* remove this while use*/
+    display: inline-block;
+    outline: none;
+    text-align: center;
+    text-decoration: none;
+    font-weight: normal;
+    vertical-align: middle;
+    border: 2px solid;
+    transition: all 0.2s ease;
+    box-sizing: border-box;
+    font-size: 14px;
+    padding: 0 15px;
+    line-height: 50px;
+    opacity: 0.5;
+    text-transform: uppercase;
+
+    &.btn-blue {
+        color: #d3ebff;
+        border-color: #d3ebff;
+    }
+    &.btn-blue:hover {
+      background: #d3ebff;
+      color: #333;
+      border-color: #d3ebff;
+    }
+}
+
+
+.bordered {
+    .fancybox-margin{
+        &#bodyborder-top,
+        &#bodyborder-bottom,
+        &#bodyborder-left,
+        &#bodyborder-right{
+            background-color: #333333;
+        }
+    }
+
+    #page-content{padding: 30px;}
+    #bodyborder-left{width: 30px; background: #f6f5ff;}
+    #bodyborder-right{width: 30px; background: #f6f5ff;}
+    #bodyborder-top{height: 40px; background: #f6f5ff;}
+    #bodyborder-bottom{height: 30px; background: #f6f5ff;}
+
+    nav#main-nav {
+        top: 40px;
+        right: 30px;
+        width: ~"calc(100% - 60px)";
+        height: ~"calc(100% - 60px)";
+    }
+}
+
+.loading-end{
+    &.bordered{
+        #bodyborder-top,
+        #bodyborder-bottom,
+        #bodyborder-left,
+        #bodyborder-right{
+            -webkit-transition: all 0.2s 0.3s ease;
+            -moz-transition: all 0.2s 0.3s ease;
+            -o-transition: all 0.2s 0.3s ease;
+            -ms-transition: all 0.2s 0.3s ease;
+            transition: all 0.2s 0.3s ease;
+        }
+    }
+
+    footer{
+        .socialmedia-widget{
+            margin-top: 12px;
+        }
+        .copyright{
+            line-height: 50px;
+        }
+    }
+}
+
+
+
