@@ -5,7 +5,7 @@ module.exports = function(grunt) {
         uglify: {
           app: {
             files: {
-              'web/compiled/app/scripts.min.js': [
+              'web/compiled/app/libs.min.js': [
                     'web/files/js/retina.js',
                     'web/files/js/jquery.pace.js',
                     'web/files/js/jquery.easing.1.3.js',
@@ -24,6 +24,27 @@ module.exports = function(grunt) {
                     'web/files/js/pond-form.js',
                     'web/files/js/pond-header.js',
                     'web/files/js/script.js'
+                ]
+            }
+          }
+        },
+        cssmin: {
+          options: {
+            mergeIntoShorthands: false,
+            roundingPrecision: -1
+          },
+          target: {
+            files: {
+              'web/compiled/app/libs.min.css': [
+                    'web/files/css/style.css',
+                    'web/files/css/colored.css',
+                    'web/files/css/owl.carousel.css',
+                    'web/files/css/owl.transitions.css',
+                    'web/files/css/fancybox.css',
+                    'web/files/css/font-awesome.min.css',
+                    'web/files/rs-plugin/css/settings.css',
+                    'web/files/css/pe-icon-7-stroke.css',
+                    'web/files/css/mqueries.css'
                 ]
             }
           }
@@ -53,7 +74,8 @@ module.exports = function(grunt) {
     // Load the plugin that provides the "less" task.
     grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-contrib-cssmin');
 
     // Default task(s).
-    grunt.registerTask('default', ['less', 'uglify']);
+    grunt.registerTask('default', ['less', 'uglify', 'cssmin']);
 };
