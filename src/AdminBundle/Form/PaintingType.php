@@ -14,8 +14,11 @@ class PaintingType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('title')
+        $builder
+            ->add('title')
+            ->add('titleEn')
             ->add('description',  CKEditorType::class)
+            ->add('descriptionEn',  CKEditorType::class)
             ->add('thumbnail')
             ->add('image')
             ->add('createdAt')

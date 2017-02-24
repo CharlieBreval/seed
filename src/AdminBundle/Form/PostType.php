@@ -16,10 +16,14 @@ class PostType extends AbstractType
     {
         $builder
             ->add('title')
+            ->add('titleEn')
             ->add('slug')
+            ->add('slugEn')
             ->add('createdAt')
             ->add('synopsis')
+            ->add('synopsisEn')
             ->add('body',  CKEditorType::class)
+            ->add('bodyEn',  CKEditorType::class)
             ->add('thumbnail')
             ->add('cover')
         ;

@@ -12,13 +12,14 @@ class RequestListener
     {
         $request = $event->getRequest();
         if (!$event->isMasterRequest()) {
-            // don't do anything if it's not the master request
             return;
         }
 
         $lang = substr($request->server->get('HTTP_ACCEPT_LANGUAGE', 'en'), 0, 2);
-        if ($lang === 'fr') {
-            $locale = $request->setLocale($lang);
+        $initLocale = $request->getSession()->get('_init_locale', null);
+        if (null === $initLocale && $lang === 'fr') {
+            $request->getSession()->set('_init_locale', $lang);
+            $request->setLocale($lang);
         }
     }
 }

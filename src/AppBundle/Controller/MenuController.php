@@ -36,6 +36,5 @@ class MenuController extends Controller
      */
     public function changeLocaleAction(Request $request)
     {
-
     }
 }
