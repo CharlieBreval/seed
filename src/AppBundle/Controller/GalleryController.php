@@ -13,7 +13,9 @@ class GalleryController extends Controller
      */
     public function indexAction()
     {
-        $results = $this->getDoctrine()->getRepository('AdminBundle:Painting')->findAll();
+        $results = $this->getDoctrine()->getRepository('AdminBundle:Painting')->findBy([], [
+            'createdAt' => 'DESC'
+        ]);
         $sections = [];
 
         foreach ($results as $key => $painting) {
