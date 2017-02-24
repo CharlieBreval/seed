@@ -20,7 +20,14 @@
                     <div class="masonry-item">
                         <div class="imgoverlay overlay-dark overlay-transparent name-hidden">
                             <div class="overlaycaption">
-                                <h5 class="overlay-name title-minimal"><strong>{{ painting.title }}</strong></h5>
+                                <h5 class="overlay-name title-minimal">
+                                <strong>
+                                    {% if app.request.locale == 'fr' %}
+                                        {{ painting.title }}
+                                    {% else %}
+                                        {{ painting.titleEn }}
+                                    {% endif %}
+                                </strong></h5>
                                 <div class="separator-small"><span></span></div>
                                 <h6 class="alttitle">{{'Oil on canvas'|trans}}</h6>
                             </div>
