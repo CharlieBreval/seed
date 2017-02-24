@@ -24,8 +24,9 @@
                                 <div class="separator-small"><span></span></div>
                                 <h6 class="alttitle">Oil on canvas</h6>
                             </div>
-                            <a href="{{ painting.image }}" class="openfancybox" rel="gallery1"><img src="{{ painting.image}}" alt="SEO IMAGE NAME"></a>
-                            <img src="{{ painting.thumbnail }}" alt="SEO IMAGE NAME">
+                            <a href="{{ asset(painting.image) }}" class="openfancybox" rel="gallery1">
+                            </a>
+                            <img src="{{ asset(painting.thumbnail) }}" alt="SEO IMAGE NAME">
                         </div>
 
                     </div>

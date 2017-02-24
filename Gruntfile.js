@@ -8,8 +8,6 @@ module.exports = function(grunt) {
               'web/compiled/app/libs.min.js': [
                     'web/files/js/retina.js',
                     'web/files/js/jquery.pace.js',
-                    'web/files/js/jquery.easing.1.3.js',
-                    'web/files/js/jquery.easing.compatibility.js',
                     'web/files/js/jquery.bgvideo.min.js',
                     'web/files/js/jquery.counter.min.js',
                     'web/files/js/jquery.fancybox.pack.js',

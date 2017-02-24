@@ -31,9 +31,23 @@ class Post
     /**
      * @var string
      *
+     * @ORM\Column(name="title_en", type="string", length=255)
+     */
+    private $titleEn;
+
+    /**
+     * @var string
+     *
      * @ORM\Column(name="slug", type="string", length=255, unique=true)
      */
     private $slug;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="slug_en", type="string", length=255)
+     */
+    private $slugEn;
 
     /**
      * @var \DateTime
@@ -52,9 +66,23 @@ class Post
     /**
      * @var string
      *
+     * @ORM\Column(name="synopsis_en", type="string", length=255)
+     */
+    private $synopsisEn;
+
+    /**
+     * @var string
+     *
      * @ORM\Column(name="body", type="text")
      */
     private $body;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="body_en", type="text")
+     */
+    private $bodyEn;
 
     /**
      * @var string
@@ -70,11 +98,10 @@ class Post
      */
     private $cover;
 
-
     /**
      * Get id
      *
-     * @return int
+     * @return integer
      */
     public function getId()
     {
@@ -106,6 +133,30 @@ class Post
     }
 
     /**
+     * Set titleEn
+     *
+     * @param string $titleEn
+     *
+     * @return Post
+     */
+    public function setTitleEn($titleEn)
+    {
+        $this->titleEn = $titleEn;
+
+        return $this;
+    }
+
+    /**
+     * Get titleEn
+     *
+     * @return string
+     */
+    public function getTitleEn()
+    {
+        return $this->titleEn;
+    }
+
+    /**
      * Set slug
      *
      * @param string $slug
@@ -127,6 +178,30 @@ class Post
     public function getSlug()
     {
         return $this->slug;
+    }
+
+    /**
+     * Set slugEn
+     *
+     * @param string $slugEn
+     *
+     * @return Post
+     */
+    public function setSlugEn($slugEn)
+    {
+        $this->slugEn = $slugEn;
+
+        return $this;
+    }
+
+    /**
+     * Get slugEn
+     *
+     * @return string
+     */
+    public function getSlugEn()
+    {
+        return $this->slugEn;
     }
 
     /**
@@ -178,6 +253,30 @@ class Post
     }
 
     /**
+     * Set synopsisEn
+     *
+     * @param string $synopsisEn
+     *
+     * @return Post
+     */
+    public function setSynopsisEn($synopsisEn)
+    {
+        $this->synopsisEn = $synopsisEn;
+
+        return $this;
+    }
+
+    /**
+     * Get synopsisEn
+     *
+     * @return string
+     */
+    public function getSynopsisEn()
+    {
+        return $this->synopsisEn;
+    }
+
+    /**
      * Set body
      *
      * @param string $body
@@ -199,6 +298,30 @@ class Post
     public function getBody()
     {
         return $this->body;
+    }
+
+    /**
+     * Set bodyEn
+     *
+     * @param string $bodyEn
+     *
+     * @return Post
+     */
+    public function setBodyEn($bodyEn)
+    {
+        $this->bodyEn = $bodyEn;
+
+        return $this;
+    }
+
+    /**
+     * Get bodyEn
+     *
+     * @return string
+     */
+    public function getBodyEn()
+    {
+        return $this->bodyEn;
     }
 
     /**
@@ -249,4 +372,3 @@ class Post
         return $this->cover;
     }
 }
-

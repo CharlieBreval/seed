@@ -45,56 +45,66 @@ a.btn-ghost, .btn-ghost {
 
 
 .bordered {
-    .fancybox-margin{
-        &#bodyborder-top,
-        &#bodyborder-bottom,
-        &#bodyborder-left,
-        &#bodyborder-right{
-            background-color: #333333;
-        }
+    .fancybox-overlay{
+        z-index: 100030;
     }
-
-    #page-content{padding: 30px;}
-    #bodyborder-left{width: 30px; background: #f6f5ff;}
-    #bodyborder-right{width: 30px; background: #f6f5ff;}
-    #bodyborder-top{height: 40px; background: #f6f5ff;}
-    #bodyborder-bottom{height: 30px; background: #f6f5ff;}
-
     nav#main-nav {
-        top: 40px;
-        right: 30px;
-        width: ~"calc(100% - 60px)";
-        height: ~"calc(100% - 70px)";
-
         .nav-bg{ opacity: 0.7}
     }
 }
 
-
-
-.loading-end{
-    &.bordered{
-        #bodyborder-top,
-        #bodyborder-bottom,
-        #bodyborder-left,
-        #bodyborder-right{
-            -webkit-transition: all 0.2s 0.3s ease;
-            -moz-transition: all 0.2s 0.3s ease;
-            -o-transition: all 0.2s 0.3s ease;
-            -ms-transition: all 0.2s 0.3s ease;
-            transition: all 0.2s 0.3s ease;
-        }
-    }
-
-    footer{
-        .socialmedia-widget{
-            margin-top: 12px;
-        }
-        .copyright{
-            line-height: 50px;
-        }
-    }
+#fancybox-lock{
+    z-index: 100050;
 }
+
+
+.tab-like {
+    ul.tab-like-nav {
+        padding: 0;
+        margin: 0;
+        margin: 0 !important;
+        list-style: none !important;
+        position: relative;
+        z-index: 1;
+
+        li {
+            background: none;
+            padding: 0 !important;
+            float: left;
+            margin: 0 30px 0 0 !important;
+
+            a{
+                display: block;
+                color: #0d0d0d;
+                font-family: 'Lato';
+                font-weight: 400;
+                text-transform: uppercase;
+                font-size: 13px;
+                line-height: 20px;
+                letter-spacing: 0.2em;
+                margin-bottom: 10px;
+                position: relative;
+
+                &:after {
+                    content:"";
+                    position: absolute;
+                    bottom: 0;
+                    left: 48%; margin-left: -0%;
+                    width: 0%;
+                    height: 1px;
+                    background: #0d0d0d;
+                    transition: all 200ms ease;
+                    -webkit-transition: all 200ms ease;
+                    -moz-transition: all 200ms ease;
+                    -o-transition: all 200ms ease;
+                    -ms-transition: all 200ms ease;
+                }
+            }
+        }
+    }
+
+}
+.tab-like ul.tab-like-nav li a:hover:after, .tab-like ul.tab-like-nav li a.active:after {width: 100%;margin-left: -50%;}
 
 
 

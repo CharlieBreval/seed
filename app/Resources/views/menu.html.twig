@@ -6,7 +6,7 @@
         <ul>
             {% for item in menu.items %}
                 <li {% if currentRoute == item.route %}class="current-menu-item"{% endif %}>
-                    <a href="{{ path(item.route) }}" data-bigletter="{{ item.big_letter }}">{{ item.label }}</a>
+                    <a href="{{ path(item.route) }}" data-bigletter="{{ item.big_letter }}">{{ item.label|trans }}</a>
                 </li>
             {% endfor %}
         </ul>
@@ -19,4 +19,15 @@
         </div>
         <div class="nav-bg"></div>
     </nav>
+</div>
+
+<div class="right-float clearfix tab-like">
+    <ul class="tab-like-nav">
+        {% for locale in ['fr', 'en'] %}
+            {# {% set routeParams = app.request.get('_route_params', []) %} #}
+            {% set localePath = path(currentRoute, (currentParameters|merge({'_locale':locale}))) %}
+
+            <li><a {% if app.request.locale == locale %}class="active"{% endif %} href="{{localePath}}">{{ ('menu_locale.'~locale)| trans }}</a></li>
+        {% endfor %}
+    </ul>
 </div>

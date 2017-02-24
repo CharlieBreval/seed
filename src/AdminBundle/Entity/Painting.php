@@ -31,9 +31,23 @@ class Painting
     /**
      * @var string
      *
+     * @ORM\Column(name="title_en", type="string", length=255)
+     */
+    private $titleEn;
+
+    /**
+     * @var string
+     *
      * @ORM\Column(name="description", type="text", nullable=true)
      */
     private $description;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="description_en", type="text", nullable=true)
+     */
+    private $descriptionEn;
 
     /**
      * @var string
@@ -59,7 +73,7 @@ class Painting
     /**
      * Get id
      *
-     * @return int
+     * @return integer
      */
     public function getId()
     {
@@ -91,6 +105,30 @@ class Painting
     }
 
     /**
+     * Set titleEn
+     *
+     * @param string $titleEn
+     *
+     * @return Painting
+     */
+    public function setTitleEn($titleEn)
+    {
+        $this->titleEn = $titleEn;
+
+        return $this;
+    }
+
+    /**
+     * Get titleEn
+     *
+     * @return string
+     */
+    public function getTitleEn()
+    {
+        return $this->titleEn;
+    }
+
+    /**
      * Set description
      *
      * @param string $description
@@ -115,27 +153,27 @@ class Painting
     }
 
     /**
-     * Set createdAt
+     * Set descriptionEn
      *
-     * @param \DateTime $createdAt
+     * @param string $descriptionEn
      *
      * @return Painting
      */
-    public function setCreatedAt($createdAt)
+    public function setDescriptionEn($descriptionEn)
     {
-        $this->createdAt = $createdAt;
+        $this->descriptionEn = $descriptionEn;
 
         return $this;
     }
 
     /**
-     * Get createdAt
+     * Get descriptionEn
      *
-     * @return \DateTime
+     * @return string
      */
-    public function getCreatedAt()
+    public function getDescriptionEn()
     {
-        return $this->createdAt;
+        return $this->descriptionEn;
     }
 
     /**
@@ -184,5 +222,29 @@ class Painting
     public function getImage()
     {
         return $this->image;
+    }
+
+    /**
+     * Set createdAt
+     *
+     * @param \DateTime $createdAt
+     *
+     * @return Painting
+     */
+    public function setCreatedAt($createdAt)
+    {
+        $this->createdAt = $createdAt;
+
+        return $this;
+    }
+
+    /**
+     * Get createdAt
+     *
+     * @return \DateTime
+     */
+    public function getCreatedAt()
+    {
+        return $this->createdAt;
     }
 }
