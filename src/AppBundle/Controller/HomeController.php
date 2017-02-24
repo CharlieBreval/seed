@@ -16,9 +16,6 @@ class HomeController extends Controller
      */
     public function indexAction(Request $request)
     {
-        $lang = substr($request->server->get('HTTP_ACCEPT_LANGUAGE', 'en-en'), 0, 2);
-        $locale = $request->setLocale($lang);
-
         return $this->render('AppBundle:Home:index.html.twig', []);
     }
 }
