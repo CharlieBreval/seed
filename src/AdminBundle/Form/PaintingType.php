@@ -17,8 +17,6 @@ class PaintingType extends AbstractType
         $builder
             ->add('title')
             ->add('titleEn')
-            ->add('description',  CKEditorType::class)
-            ->add('descriptionEn',  CKEditorType::class)
             ->add('thumbnail')
             ->add('image')
             ->add('createdAt')

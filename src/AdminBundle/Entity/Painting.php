@@ -38,20 +38,6 @@ class Painting
     /**
      * @var string
      *
-     * @ORM\Column(name="description", type="text", nullable=true)
-     */
-    private $description;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="description_en", type="text", nullable=true)
-     */
-    private $descriptionEn;
-
-    /**
-     * @var string
-     *
      * @ORM\Column(name="thumbnail", type="string", nullable=true)
      */
     private $thumbnail;
@@ -126,54 +112,6 @@ class Painting
     public function getTitleEn()
     {
         return $this->titleEn;
-    }
-
-    /**
-     * Set description
-     *
-     * @param string $description
-     *
-     * @return Painting
-     */
-    public function setDescription($description)
-    {
-        $this->description = $description;
-
-        return $this;
-    }
-
-    /**
-     * Get description
-     *
-     * @return string
-     */
-    public function getDescription()
-    {
-        return $this->description;
-    }
-
-    /**
-     * Set descriptionEn
-     *
-     * @param string $descriptionEn
-     *
-     * @return Painting
-     */
-    public function setDescriptionEn($descriptionEn)
-    {
-        $this->descriptionEn = $descriptionEn;
-
-        return $this;
-    }
-
-    /**
-     * Get descriptionEn
-     *
-     * @return string
-     */
-    public function getDescriptionEn()
-    {
-        return $this->descriptionEn;
     }
 
     /**
