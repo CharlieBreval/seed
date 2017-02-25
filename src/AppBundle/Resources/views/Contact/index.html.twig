@@ -1,4 +1,13 @@
 {% extends 'base.html.twig' %}
+
+{% block meta_title %}
+<title>{{'contact.title'|trans }}</title>
+{% endblock %}
+
+{% block meta_description %}
+    <meta name="description" content="{{'contact.description'|trans}}" />
+{% endblock %}
+
 {% block flash %}
 {% endblock %}
 {% block body %}

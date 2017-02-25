@@ -1,4 +1,11 @@
 {% extends "::base.html.twig" %}
+{% block meta_title %}
+<title>{{'gallery.title'|trans }}</title>
+{% endblock %}
+
+{% block meta_description %}
+    <meta name="description" content="{{'gallery.description'|trans}}" />
+{% endblock %}
 
 {% block body %}
     <!-- GALLERY SECTION -->

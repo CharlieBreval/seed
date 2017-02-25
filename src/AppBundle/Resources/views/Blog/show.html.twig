@@ -1,5 +1,13 @@
 {% extends 'base.html.twig' %}
 
+{% block meta_title %}
+<title>{{ post.title }} - Charlie Bréval paintings</title>
+{% endblock %}
+
+{% block meta_description %}
+    <meta name="description" content="{{ post.synopsis }}" />
+{% endblock %}
+
 {% block title %}
     <!-- PAGE TITLE -->
     <section id="page-title" class="full-height text-light parallax-section" data-parallax-image="{{ asset(post.cover) }}">

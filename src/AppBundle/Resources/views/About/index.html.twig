@@ -1,5 +1,11 @@
 {% extends 'base.html.twig' %}
+{% block meta_title %}
+<title>{{'about.title'|trans }}</title>
+{% endblock %}
 
+{% block meta_description %}
+    <meta name="description" content="{{'about.description'|trans}}" />
+{% endblock %}
 {% block body %}
     <!-- ABOUT SECTION -->
     <section id="about" class="notoppadding">

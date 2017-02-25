@@ -1,11 +1,17 @@
-'View Paintings': 'Voir les peintures'
-'Home': 'Accueil'
-'Gallery': 'Gallerie'
-'About': 'A propos'
-'Blog': 'Blog'
-'Contact': 'Contactez-moi'
-'Contents rights to Charlie Bréval': 'Images réservées à Charlie Bréval'
-'Oil on canvas': 'Huile sur toile'
+"View Paintings": "Voir les peintures"
+"Home": "Accueil"
+"Gallery": "Gallerie"
+"About": "A propos"
+"Blog": "Blog"
+"Contact": "Contactez-moi"
+"Contents rights to Charlie Bréval": "Images réservées à Charlie Bréval"
+"Oil on canvas": "Huile sur toile"
+"home.title": "Charlie Bréval peintures - artiste Nantes"
+"home.description": "Peintures à l'huile d'un jeune artiste passionné de peinture à l'huile"
+"gallery.title": "Galerie - Charlie Bréval paintings"
+"about.title": "A propos - Charlie Bréval paintings"
+"blog.title": "Blog - Charlie Bréval paintings"
+"contact.title": "Contactez-moi  - Charlie Bréval paintings"
 menu_locale:
     en: English
     fr: Français

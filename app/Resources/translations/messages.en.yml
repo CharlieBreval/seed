@@ -1,11 +1,17 @@
-'View Paintings': 'View Paintings'
-'Home': 'Home'
-'Gallery': 'Gallery'
-'About': 'About'
-'Blog': 'Blog'
-'Contact': 'Contact'
-'Contents rights to Charlie Bréval': 'Contents rights to Charlie Bréval'
-'Oil on canvas': 'Oil on canvas'
+"View Paintings": "View Paintings"
+"Home": "Home"
+"Gallery": "Gallery"
+"About": "About"
+"Blog": "Blog"
+"Contact": "Contact"
+"Contents rights to Charlie Bréval": "Contents rights to Charlie Bréval"
+"Oil on canvas": "Oil on canvas"
+"home.title": "Charlie Bréval paintings - oil painter"
+"home.description": "Oil paintings and stuff of a young artist passionated in Oil paintings"
+"gallery.title": "Gallery - Charlie Bréval paintings"
+"about.title": "About me - Charlie Bréval paintings"
+"blog.title": "Blog - Charlie Bréval paintings"
+"contact.title": "Contact - Charlie Bréval paintings"
 menu_locale:
     en: English
     fr: Français
