@@ -20,8 +20,10 @@ class GalleryController extends Controller
 
         foreach ($results as $key => $painting) {
             $category = $painting->getCreatedAt()->format('Y');
-            $sections[$category]['name'] = $painting->getCreatedAt()->format('Y');
-            $sections[$category]['paintings'][] = $painting;
+            if ($category >= 2015) {
+                $sections[$category]['name'] = $painting->getCreatedAt()->format('Y');
+                $sections[$category]['paintings'][] = $painting;
+            }
         }
 
         return $this->render('AppBundle:Gallery:index.html.twig', [
