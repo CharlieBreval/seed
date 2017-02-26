@@ -50,3 +50,7 @@
         </div>
     </section>
 {% endblock %}
+{% block javascripts %}
+    {{ parent()}}
+    <script type="text/javascript" src="{{ asset('files/js/jquery.fancybox.pack.js')}}"></script>
+{% endblock %}

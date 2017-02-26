@@ -10,7 +10,6 @@ module.exports = function(grunt) {
                     'web/files/js/jquery.pace.js',
                     'web/files/js/jquery.bgvideo.min.js',
                     'web/files/js/jquery.counter.min.js',
-                    'web/files/js/jquery.fancybox.pack.js',
                     'web/files/rs-plugin/js/jquery.themepunch.tools.min.js',
                     'web/files/rs-plugin/js/jquery.themepunch.revolution.min.js',
                     'web/files/js/jquery.parallax.min.js',
