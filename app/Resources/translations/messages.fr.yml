@@ -1,6 +1,6 @@
 "View Paintings": "Voir les peintures"
 "Home": "Accueil"
-"Gallery": "Gallerie"
+"Gallery": "Galerie"
 "About": "A propos"
 "Blog": "Blog"
 "Contact": "Contactez-moi"
@@ -12,6 +12,13 @@
 "about.title": "A propos - Charlie Bréval paintings"
 "blog.title": "Blog - Charlie Bréval paintings"
 "contact.title": "Contactez-moi  - Charlie Bréval paintings"
+"about_page":
+    "title": Qui suis-je ?
+    "description": "<p>Peintre figuratif Nantais né en 1989, 
+    je donne à la peinture le plus clair de mon temps libre, et lui voue une certaine fascination.</p>
+    <p>Celle-ci peine parfois à me le rendre, 
+    mais comme l'a si bien dit un artiste dont je ne saurai vous ressortir le nom : \"en entrant dans cet atelier, quittez toute espérance\".
+    "
 menu_locale:
     en: English
     fr: Français

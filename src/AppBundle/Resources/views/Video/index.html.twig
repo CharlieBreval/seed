@@ -1,4 +1,34 @@
 {% extends "::base.html.twig" %}
 
+{% block title %}
+    <section id="page-title">
+        <div class="section-inner align-center section-video-title">
+            <div class="main-title">
+                <h3><strong>Videos</strong></h3>
+                <div class="separator"><span></span></div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
 {% block body %}
+            <section id="split-demo" class="notoppadding">
+                <div class="section-inner">
+
+                    <!-- SPLIT DEMO C -->
+                    <div id="split-demo-c" class="split-section clearfix">
+                        <div class="split-left split-half">
+                            <div class="split-wrapped-content vertical-center">
+                                <h5><strong>Oil painting / Oil surfing</strong></h5>
+                                <div class="separator-small"><span></span></div>
+                            </div>
+                        </div> <!-- END .split-left -->
+
+                        <div class="split-right split-half">
+                            <iframe src="https://player.vimeo.com/video/205935875" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                        </div> <!-- END .split-right -->
+                    </div> <!-- END .split-section -->
+                    <!-- SPLIT DEMO C -->
+
+               </div> <!-- END .section-inner-->
+            </section>
 {% endblock %}

@@ -8,7 +8,6 @@
             <tr>
                 <th>Id</th>
                 <th>Title</th>
-                <th>Description</th>
                 <th>Thumbnail</th>
                 <th>Image</th>
                 <th>Createdat</th>
@@ -20,7 +19,6 @@
             <tr>
                 <td><a href="{{ path('painting_show', { 'id': painting.id }) }}">{{ painting.id }}</a></td>
                 <td>{{ painting.title }}</td>
-                <td>{{ painting.description }}</td>
                 <td>{{ painting.thumbnail }}</td>
                 <td>{{ painting.image }}</td>
                 <td>{% if painting.createdAt %}{{ painting.createdAt|date('Y-m-d H:i:s') }}{% endif %}</td>

@@ -33,7 +33,7 @@ framework:
     fragments:       ~
     http_method_override: true
     assets:
-        version: 'v6'
+        version: 'vaer3'
         version_format: '%%s?version=%%s'
     php_errors:
         log: true
