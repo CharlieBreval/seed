@@ -6,7 +6,6 @@ module.exports = function(grunt) {
           app: {
             files: {
               'web/compiled/app/libs.min.js': [
-                    'web/files/js/retina.js',
                     'web/files/js/jquery.pace.js',
                     'web/files/js/jquery.bgvideo.min.js',
                     'web/files/js/jquery.counter.min.js',
