@@ -5,7 +5,12 @@
 # to each configured DirectoryIndex file (e.g. index.php, index.html, index.pl).
 DirectoryIndex app.php
 
-AddType video/mp4 .mp4 .m4v
+<Files ~ "\.(mp4|m4v)>
+    AddType video/mp4 mp4
+    order allow,deny
+    allow from all
+    satisfy any
+</Files>
 
 
 # By default, Apache does not evaluate symbolic links if you did not enable this
