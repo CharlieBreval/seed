@@ -2,7 +2,7 @@
 
 {% block title %}
 
-    <!-- HOME (SLIDER) -->
+{#     <!-- HOME (SLIDER) -->
     <section id="home" class="notoppadding text-light videobg-section"
                        data-videofile="videos/home"
                        data-videowidth="1280"
@@ -47,7 +47,87 @@
 
         </div>
     </section>
+    <!-- HOME (SLIDER) --> #}
+
     <!-- HOME (SLIDER) -->
+    <section id="home" class="notoppadding text-light videobg-section"
+                       data-videofile="files/uploads/coffee"
+                       data-videowidth="1280"
+                       data-videoheight="720"
+                       data-videoposter="files/uploads/1690x1100.jpg"
+                       data-videoparallax="true"
+                       data-videooverlaycolor="#000000"
+                       data-videooverlayopacity="0.6"
+                        data-sound="false">
+        <div class="section-inner">
+
+        <!-- REVOLUTION SLIDER -->
+        <div class="rev-slider-container">
+            <div class="rev-slider" >
+                <ul>
+
+                    <!-- THE FIRST SLIDE -->
+                    <li data-transition="slidedown" data-slotamount="5" data-masterspeed="1200" >
+                        <!-- THE MAIN IMAGE IN THE FIRST SLIDE -->
+                        <img src="files/uploads/transparent.png"   alt="transparent">
+
+                        <!-- LAYER NR. 1 -->
+                        <div class="tp-caption srcaption-bigwhite sft stb"
+                        data-x="center" data-hoffset="0"
+                        data-y="center" data-voffset="0"
+                        data-speed="800"
+                        data-start="400"
+                        data-easing="easeInOutQuad"
+                        data-endspeed="800"
+                        data-endeasing="easeInOutQuad"
+                        style="z-index: 2"><strong>Designed to attract</strong>
+                        </div>
+
+                    </li> <!-- end first slide -->
+
+                    <!-- THE SECOND SLIDE -->
+                    <li data-transition="slidedown" data-slotamount="5" data-masterspeed="1200" >
+                        <!-- THE MAIN IMAGE IN THE SECOND SLIDE -->
+                        <img src="files/uploads/transparent.png"   alt="transparent">
+
+                        <!-- LAYER NR. 1 -->
+                        <div class="tp-caption srcaption-bigwhite sft stb"
+                        data-x="center" data-hoffset="0"
+                        data-y="center" data-voffset="0"
+                        data-speed="800"
+                        data-start="400"
+                        data-easing="easeInOutQuad"
+                        data-endspeed="800"
+                        data-endeasing="easeInOutQuad"
+                        style="z-index: 2"><strong>Creative Minimalism</strong>
+                        </div>
+
+                    </li>
+
+                    <!-- THE THIRD SLIDE -->
+                    <li data-transition="slidedown" data-slotamount="5" data-masterspeed="1200" >
+                        <!-- THE MAIN IMAGE IN THE SECOND SLIDE -->
+                        <img src="files/uploads/transparent.png"   alt="transparent">
+
+                        <!-- LAYER NR. 1 -->
+                        <div class="tp-caption srcaption-bigwhite sft stb"
+                        data-x="center" data-hoffset="0"
+                        data-y="center" data-voffset="0"
+                        data-speed="800"
+                        data-start="400"
+                        data-easing="easeInOutQuad"
+                        data-endspeed="800"
+                        data-endeasing="easeInOutQuad"
+                        style="z-index: 2"><strong>Sharp Elegance</strong>
+                        </div>
+
+                    </li>
+
+                </ul>
+
+            </div>
+        </div> <!-- END .rev-slider-container -->
+        <!-- REVOLUTION SLIDER -->
 {% endblock %}
 {% block body %}
 
