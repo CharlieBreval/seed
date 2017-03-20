@@ -12,6 +12,8 @@ DirectoryIndex app.php
     satisfy any
 </Files>
 
+AddType video/mp4 mp4
+
 
 # By default, Apache does not evaluate symbolic links if you did not enable this
 # feature in your server configuration. Uncomment the following line if you
@@ -59,7 +61,9 @@ DirectoryIndex app.php
     # If the requested filename exists, simply serve it.
     # We only want to let Apache serve files and not directories.
     RewriteCond %{REQUEST_FILENAME} -f
+    AddType video/mp4 mp4
     RewriteRule ^ - [L]
+    AddType video/mp4 mp4
 
     # Rewrite all other queries to the front controller.
     RewriteRule ^ %{ENV:BASE}/app.php [L]
