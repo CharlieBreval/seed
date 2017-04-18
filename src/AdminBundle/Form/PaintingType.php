@@ -20,6 +20,7 @@ class PaintingType extends AbstractType
             ->add('thumbnail')
             ->add('image')
             ->add('createdAt')
+            ->add('isDisabled')
         ;
     }
 

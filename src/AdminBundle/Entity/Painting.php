@@ -57,6 +57,18 @@ class Painting
     private $createdAt;
 
     /**
+     * @var boolean
+     *
+     * @ORM\Column(name="is_disabled", type="boolean")
+     */
+    private $isDisabled;
+
+    public function __construct()
+    {
+        $this->isDisabled = false;
+    }
+
+    /**
      * Get id
      *
      * @return integer
@@ -184,5 +196,29 @@ class Painting
     public function getCreatedAt()
     {
         return $this->createdAt;
+    }
+
+    /**
+     * Set isDisabled
+     *
+     * @param boolean $isDisabled
+     *
+     * @return Painting
+     */
+    public function setIsDisabled($isDisabled)
+    {
+        $this->isDisabled = $isDisabled;
+
+        return $this;
+    }
+
+    /**
+     * Get isDisabled
+     *
+     * @return boolean
+     */
+    public function getIsDisabled()
+    {
+        return $this->isDisabled;
     }
 }
