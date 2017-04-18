@@ -11,4 +11,4 @@ set :composer_path, '/homez.651/charlieba/composer.phar'
 SSHKit.config.command_map[:composer] = "/usr/local/php7.1/bin/php #{fetch(:composer_path)}"
 SSHKit.config.command_map[:php] = "/usr/local/php7.1/bin/php"
 
-after 'deploy:updated', 'upload:medias'
+# after 'deploy:updated', 'upload:medias'
