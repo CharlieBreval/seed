@@ -1,5 +1,3 @@
-lock "3.7.2"
-
 set :application, "seed"
 set :repo_url, "https://github.com/CharlieBreval/seed.git"
 set :git

@@ -13,13 +13,15 @@
         <div class="section-inner">
         <!-- I choosed notoppadding in order to manage the spacing with the 'spacer' element. See below. -->
             {% for section in sections %}
-            <div class="wrapper">
-                <div class="spacer spacer-small"></div>
-                <div class="main-title wrapper align-center">
-                    <h4 class="title-minimal" data-bigletter="P"><strong>{{ section.name }}</strong></h4>
-                </div>
-                <div class="spacer spacer-small"></div>
-            </div>
+                {% if not loop.first %}
+                    <div class="wrapper">
+                        <div class="spacer spacer-small"></div>
+                        <div class="main-title wrapper align-center">
+                            <h4 class="title-minimal" data-bigletter="P"><strong>{{ section.name }}</strong></h4>
+                        </div>
+                        <div class="spacer spacer-small"></div>
+                    </div>
+                {% endif %}
 
 
             <div id="gallery-grid-portrait" class="masonry gallery-entries clearfix" data-maxitemwidth="500">
