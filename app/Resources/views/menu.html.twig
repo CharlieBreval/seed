@@ -1,33 +1,15 @@
-<div class="menu right-float clearfix">
-    <a href="#" class="open-nav"><span></span></a>
-    <nav id="main-nav" class="text-light">
-        <div class="nav-logo"><img src="{{ asset('files/uploads/logo-light.png') }}" alt="Logo"></div>
-        <div class="nav-inner">
-        <ul>
-            {% for item in menu.items %}
-                <li {% if currentRoute == item.route %}class="current-menu-item"{% endif %}>
-                    <a href="{{ path(item.route) }}" data-bigletter="{{ item.big_letter }}">{{ item.label|trans }}</a>
-                </li>
-            {% endfor %}
-        </ul>
-        </div>
-        <div class="nav-social">
-            <ul class="socialmedia-widget social-share">
-                <li class="facebook"><a target="_blank" href="https://www.facebook.com/charlie.breval"></a></li>
-                <li class="instagram"><a target="_blank" href="https://www.instagram.com/charlie_breval"></a></li>
-            </ul>
-        </div>
-        <div class="nav-bg"></div>
-    </nav>
-</div>
-
 <div class="right-float clearfix tab-like">
     <ul class="tab-like-nav">
+        {% for item in menu.items %}
+            <li>
+                <a {% if currentRoute == item.route %}class="active"{% endif %} href="{{ path(item.route) }}">{{ item.label|trans }}</a>
+            </li>
+        {% endfor %}
         {% for locale in ['fr', 'en'] %}
             {# {% set routeParams = app.request.get('_route_params', []) %} #}
             {% set localePath = path(currentRoute, (currentParameters|merge({'_locale':locale}))) %}
 
-            <li><a {% if app.request.locale == locale %}class="active"{% endif %} href="{{localePath}}">{{ ('menu_locale.'~locale)| trans }}</a></li>
+            <li><a {% if app.request.locale == locale %}class="light"{% else %}class="bold"{% endif %} href="{{localePath}}">{{ ('menu_locale.'~locale)| trans }}</a></li>
         {% endfor %}
     </ul>
 </div>

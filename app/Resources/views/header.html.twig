@@ -5,9 +5,7 @@
        <!-- DEFAULT HEADER CONTENT -->
         <div class="default-header-content">
             <div id="logo" class="left-float">
-                <a id="fixed-logo" class="logotype" href="{{ path('app_home')}}">
-                    <img src="{{ asset('files/uploads/logo.png') }}" alt="Logo">
-                </a>
+                <a href="{{ path('app_home') }}" class="logo">Charlie <span class="breval">Bréval</span></a>
             </div>
 
             {{ render(controller('AppBundle:Menu:index',{})) }}
