@@ -30,12 +30,12 @@
 
                     <!-- Single Pagination -->
                     <ul class="single-pagination fixed-pagination">
-                        {% if nextPost %}
+                        {% if nextPost is not null %}
                             <li class="next"><a href="{{ path('app_blog_show', {'slug':nextPost.slug})}}" class="transition" data-name="{{ nextPost.title }}">
                             <i class="pagination-icon"></i> Next article <i class="pagination-icon"></i></a></li>
                         {% endif %}
 
-                        {% if previousPost %}
+                        {% if previousPost is not null %}
                             <li class="prev"><a href="{{ path('app_blog_show', {'slug':previousPost.slug})}}" class="transition" data-name="{{ previousPost.title }}">
                             <i class="pagination-icon"></i> Previous article <i class="pagination-icon"></i></a></li>
                         {% endif %}
