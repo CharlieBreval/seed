@@ -6,10 +6,7 @@
             </li>
         {% endfor %}
         {% for locale in ['fr', 'en'] %}
-            {# {% set routeParams = app.request.get('_route_params', []) %} #}
-            {% set localePath = path(currentRoute, (currentParameters|merge({'_locale':locale}))) %}
-
-            <li><a {% if app.request.locale == locale %}class="light"{% else %}class="bold"{% endif %} href="{{localePath}}">{{ ('menu_locale.'~locale)| trans }}</a></li>
+            <li><a {% if app.request.locale == locale %}class="light"{% else %}class="bold"{% endif %} href="{{ path('app_home', {'_locale' : locale }) }}">{{ ('menu_locale.'~locale)| trans }}</a></li>
         {% endfor %}
     </ul>
 </div>
