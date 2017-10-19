@@ -1094,11 +1094,11 @@ section { }
 10. MASONRY (Blog + Portfolio)
 ------------------------------------------------*/
 .masonry {
-	width: 120%;								/* DO NOT CHANGE THIS VALUE */
+	width: 100%;								/* DO NOT CHANGE THIS VALUE */
 	}
 	
 .masonry .masonry-item {
-	width: 24.98%;								/* will be overwritten by javascript */
+	width: 33.3333%;								/* will be overwritten by javascript */
 	margin-right: 0px;
 	margin-bottom: 0px;
 	float: left;
