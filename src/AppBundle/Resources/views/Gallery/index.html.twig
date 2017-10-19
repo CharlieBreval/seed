@@ -26,7 +26,7 @@
         <div class="section-inner align-center">
               <ul class="pagination">
                 {% for i in range(1, nbPages) %}
-                    <li class="page-item"><a class="page-link" href="{{ path('app_gallery', {'page': i, '_locale': app.request.locale}) }}">{{ i }}</a></li>
+                    <li class="page-item {% if page == i %} disabled {% endif %}"><a class="page-link" href="{{ path('app_gallery', {'page': i, '_locale': app.request.locale}) }}">{{ i }}</a></li>
                 {% endfor %}
               </ul>
         </div>

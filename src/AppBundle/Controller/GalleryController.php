@@ -21,7 +21,8 @@ class GalleryController extends Controller
 
         return $this->render('AppBundle:Gallery:index.html.twig', [
             'paintings' => $paintings,
-            'nbPages' => $nbPages
+            'nbPages' => $nbPages,
+            'page' => $page
         ]);
     }
 }
