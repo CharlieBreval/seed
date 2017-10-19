@@ -1,4 +1,5 @@
 {% extends "::base.html.twig" %}
+
 {% block meta_title %}
 <title>{{'gallery.title'|trans }}</title>
 {% endblock %}
@@ -9,50 +10,25 @@
 
 {% block body %}
     <!-- GALLERY SECTION -->
-    <section id="gallery" class="notoppadding">
+    <section id="" class="notoppadding">
         <div class="section-inner">
-        <!-- I choosed notoppadding in order to manage the spacing with the 'spacer' element. See below. -->
-            {% for section in sections %}
-                {% if not loop.first %}
-                    <div class="wrapper">
-                        <div class="spacer spacer-small"></div>
-                        <div class="main-title wrapper align-center">
-                            <h4 class="title-minimal" data-bigletter="P"><strong>{{ section.name }}</strong></h4>
-                        </div>
-                        <div class="spacer spacer-small"></div>
-                    </div>
-                {% endif %}
-
-
-            <div id="gallery-grid-portrait" class="masonry gallery-entries clearfix" data-maxitemwidth="500">
-                {% for painting in section.paintings %}
-                    <div class="masonry-item">
-                        <div class="imgoverlay overlay-dark overlay-transparent name-hidden">
-                            <div class="overlaycaption">
-                                <h5 class="overlay-name title-minimal">
-                                <strong>
-                                    {% if app.request.locale == 'fr' %}
-                                        {{ painting.title }}
-                                    {% else %}
-                                        {{ painting.titleEn }}
-                                    {% endif %}
-                                </strong></h5>
-                                <div class="separator-small"><span></span></div>
-                                <h6 class="alttitle">{{'Oil on canvas'|trans}}</h6>
-                            </div>
-                            <a href="{{ asset(painting.image) }}" class="openfancybox" rel="gallery1">
-                            </a>
-                            <img src="{{ asset(painting.thumbnail) }}" alt="SEO IMAGE NAME">
-                        </div>
-
-                    </div>
+            <div id="lightgallery" class="masonry">
+                {% for painting in paintings %}
+                <a href="{{ asset(painting.image) }}" class="masonry-item">
+                    <img src="{{ asset(painting.thumbnail) }}" />
+                </a>
                 {% endfor %}
-            </div> <!-- END .masonry -->
-            {% endfor %}
+            </div>
         </div>
     </section>
 {% endblock %}
 {% block javascripts %}
     {{ parent()}}
-    <script type="text/javascript" src="{{ asset('files/js/jquery.fancybox.pack.js')}}"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("#lightgallery").lightGallery({
+            });
+        });
+    </script>
 {% endblock %}

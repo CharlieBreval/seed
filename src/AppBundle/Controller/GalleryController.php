@@ -13,22 +13,14 @@ class GalleryController extends Controller
      */
     public function indexAction()
     {
-        $results = $this->getDoctrine()->getRepository('AdminBundle:Painting')->findBy([
+        $paintings = $this->getDoctrine()->getRepository('AdminBundle:Painting')->findBy([
             'isDisabled' => false
         ], [
             'createdAt' => 'DESC'
         ]);
 
-        $sections = [];
-
-        foreach ($results as $key => $painting) {
-            $category = $painting->getCreatedAt()->format('Y');
-            $sections[$category]['name'] = $painting->getCreatedAt()->format('Y');
-            $sections[$category]['paintings'][] = $painting;
-        }
-
         return $this->render('AppBundle:Gallery:index.html.twig', [
-            'sections' => $sections
+            'paintings' => $paintings
         ]);
     }
 }

@@ -19,7 +19,10 @@ module.exports = function(grunt) {
                     'web/files/js/jquery.owl.carousel.min.js',
                     'web/files/js/pond-form.js',
                     'web/files/js/pond-header.js',
-                    'web/files/js/script.js'
+                    'web/files/js/script.js',
+                    'web/lightview/js/lightgallery.min.js',
+                    'web/lightview/js/lg-thumbnail.min.js',
+                    'web/lightview/js/lg-fullscreen.min.js'
                 ]
             }
           }
@@ -40,7 +43,8 @@ module.exports = function(grunt) {
                     'web/files/css/font-awesome.min.css',
                     'web/files/rs-plugin/css/settings.css',
                     'web/files/css/pe-icon-7-stroke.css',
-                    'web/files/css/mqueries.css'
+                    'web/files/css/mqueries.css',
+                    'web/lightview/css/lightgallery.css'
                 ]
             }
           }
