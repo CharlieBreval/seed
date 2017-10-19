@@ -10,15 +10,25 @@
 
 {% block body %}
     <!-- GALLERY SECTION -->
-    <section id="" class="notoppadding">
+    <section id="gallery" class="notoppadding">
         <div class="section-inner">
-            <div id="lightgallery" class="masonry">
+            <div id="lightgallery" class="masonry gallery-entries clearfix" data-maxitemwidth="500">
                 {% for painting in paintings %}
                 <a href="{{ asset(painting.image) }}" class="masonry-item">
                     <img src="{{ asset(painting.thumbnail) }}" />
                 </a>
                 {% endfor %}
             </div>
+        </div>
+    </section>
+
+    <section id="pagination-section">
+        <div class="section-inner align-center">
+              <ul class="pagination">
+                {% for i in range(1, nbPages) %}
+                    <li class="page-item"><a class="page-link" href="{{ path('app_gallery', {'page': i, '_locale': app.request.locale}) }}">1</a></li>
+                {% endfor %}
+              </ul>
         </div>
     </section>
 {% endblock %}
@@ -28,6 +38,7 @@
     <script type="text/javascript">
         $(document).ready(function() {
             $("#lightgallery").lightGallery({
+                'thumbnail' : false
             });
         });
     </script>

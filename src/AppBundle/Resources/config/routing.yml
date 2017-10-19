@@ -5,8 +5,8 @@ app_home:
         _locale: en|fr
 
 app_gallery:
-    path:     /{_locale}/gallery
-    defaults: { _controller: AppBundle:Gallery:index }
+    path:     /{_locale}/gallery/{page}
+    defaults: { _controller: AppBundle:Gallery:index, page: 1 }
     requirements:
         _locale: en|fr
 

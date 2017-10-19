@@ -10,4 +10,24 @@ namespace AdminBundle\Repository;
  */
 class PaintingRepository extends \Doctrine\ORM\EntityRepository
 {
+    const NB_ELEM_PAGE = 20;
+
+    public function getPaintings ($page, $isCount = false) {
+
+        $qb = $this->createQueryBuilder('p')
+            ->where('p.isDisabled = 0')
+            ->orderBy('p.createdAt', 'DESC')
+        ;
+
+        if ($isCount) {
+            $qb->select('COUNT (p)');
+            return $qb->getQuery()->getSingleScalarResult();
+        }
+
+        $query = $qb->getQuery();
+        $query->setMaxResults(self::NB_ELEM_PAGE);
+        $query->setFirstResult(($page -1 ) * self::NB_ELEM_PAGE);
+
+        return $query->getResult();
+    }
 }
