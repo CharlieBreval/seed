@@ -31,9 +31,13 @@
     <section id="pagination-section">
         <div class="section-inner align-center">
               <ul class="pagination">
-                {% for i in range(1, nbPages) %}
-                    <li class="page-item {% if page == i %} disabled {% endif %}"><a class="page-link" href="{{ path('app_gallery', {'page': i, '_locale': app.request.locale}) }}">{{ i }}</a></li>
-                {% endfor %}
+
+                    {% if page > 1 and nbPages > 1 %}
+                    <li class="page-item"><a class="page-link" href="{{ path('app_gallery', {'page': page - 1, '_locale': app.request.locale}) }}"> <i class="fa fa-angle-left"></i> &nbsp;&nbsp;Page précédente</a></li>
+                    {% endif %}
+                    {% if nbPages > page %}
+                    <li class="page-item"><a class="page-link" href="{{ path('app_gallery', {'page': page + 1, '_locale': app.request.locale}) }}">Page suivante <i class="fa fa-angle-right"></i></a></li>
+                    {% endif %}
               </ul>
         </div>
     </section>
