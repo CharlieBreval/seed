@@ -15,11 +15,13 @@
         <div class="section-inner">
         <!-- I choosed notoppadding in order to manage the spacing with the 'spacer' element. See below. -->
 
-            <div id="lightgallery" class="masonry gallery-entries clearfix" data-maxitemwidth="800">
+            <div id="lightgallery" class="masonry gallery-entries clearfix" data-maxitemwidth="500">
                 {% for painting in paintings %}
-                    <a href="{{ asset(painting.image) }}" class="masonry-item">
-                        <img src="{{ asset(painting.thumbnail) }}" alt="{{ painting.title }}" />
-                    </a>
+                    <div class="masonry-item">
+                        <a href="{{ asset(painting.image) }}">
+                            <img src="{{ asset(painting.thumbnail) }}" alt="{{ painting.title }}" />
+                        </a>
+                    </div>
                 {% endfor %}
             </div> <!-- END .masonry -->
         </div>
