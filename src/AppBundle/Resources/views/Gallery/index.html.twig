@@ -11,15 +11,19 @@
 {% block body %}
     <!-- GALLERY SECTION -->
     <section id="gallery" class="notoppadding">
+
         <div class="section-inner">
-            <div id="lightgallery" class="masonry gallery-entries clearfix" data-maxitemwidth="500">
+        <!-- I choosed notoppadding in order to manage the spacing with the 'spacer' element. See below. -->
+
+            <div id="lightgallery" class="masonry gallery-entries clearfix" data-maxitemwidth="800">
                 {% for painting in paintings %}
-                    <a href="{{ asset(painting.image) }}" class="masonry-item">
-                        <img src="{{ asset(painting.thumbnail) }}" />
-                    </a>
+                        <a href="{{ asset(painting.image) }}" class="masonry-item">
+                            <img src="{{ asset(painting.thumbnail) }}" alt="{{ painting.title }}" />
+                        </a>
                 {% endfor %}
-            </div>
+            </div> <!-- END .masonry -->
         </div>
+
     </section>
 
     <section id="pagination-section">
