@@ -137,6 +137,7 @@ blockquote { margin: 50px; }
 /* Small Tablets*/
 @media only screen and (max-width: 860px) {
 
+.right-float.tab-like {display: none;}
 h1 { font-size: 72px; line-height: 86px; }
 h2 { font-size: 48px; line-height: 60px; }
 h3 { font-size: 28px; line-height: 38px; }

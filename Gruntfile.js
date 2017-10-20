@@ -6,10 +6,11 @@ module.exports = function(grunt) {
           app: {
             files: {
               'web/compiled/app/libs.min.js': [
-                    'web/files/js/retina.js',
-                    'web/files/js/jquery.pace.js',
+                    'web/files/js/jquery-1.9.1.min.js',
                     'web/files/js/jquery.easing.compatibility.js',
                     'web/files/js/jquery.easing.1.3.js',
+                    'web/files/js/retina.js',
+                    'web/files/js/jquery.pace.js',
                     'web/files/js/jquery.bgvideo.min.js',
                     'web/files/js/jquery.counter.min.js',
                     'web/files/rs-plugin/js/jquery.themepunch.tools.min.js',
