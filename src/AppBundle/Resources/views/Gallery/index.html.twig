@@ -17,9 +17,9 @@
 
             <div id="lightgallery" class="masonry gallery-entries clearfix" data-maxitemwidth="800">
                 {% for painting in paintings %}
-                        <a href="{{ asset(painting.image) }}" class="masonry-item">
-                            <img src="{{ asset(painting.thumbnail) }}" alt="{{ painting.title }}" />
-                        </a>
+                    <a href="{{ asset(painting.image) }}" class="masonry-item">
+                        <img src="{{ asset(painting.thumbnail) }}" alt="{{ painting.title }}" />
+                    </a>
                 {% endfor %}
             </div> <!-- END .masonry -->
         </div>
