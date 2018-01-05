@@ -5,10 +5,15 @@ parameters:
     database_name: symfony
     database_user: root
     database_password: root
+
     mailer_transport: smtp
-    mailer_host: 127.0.0.1
+    mailer_auth_mode: login
+    mailer_host: ns0.ovh.net
+    mailer_encryption: null
+    mailer_port: 587
     mailer_user: bonjour@charliebreval.com
-    mailer_password: null
+    mailer_password: ~
+
     secret: 1c4f9510024a62e27f3695bd4089a522c22fda61
 
     app_menu:

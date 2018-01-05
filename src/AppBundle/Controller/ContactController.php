@@ -18,7 +18,6 @@ class ContactController extends Controller
     {
         if ($request->getMethod() === 'POST') {
             define("WEBMASTER_EMAIL", $request->request->get('sendto'));
-
             define("EMAIL_SUBJECT", $request->request->get('subject'));
 
             if (EMAIL_SUBJECT == '' || EMAIL_SUBJECT == 'Subject') {
@@ -45,12 +44,12 @@ class ContactController extends Controller
             }
 
 
-            $body = '<html><body>'.nl2br($body)."</body></html>";
+            $body = '<html><body>'.nl2br($body)."<br><br> Message from ".$email."</body></html>";
 
             $message = \Swift_Message::newInstance()
-                ->setSubject(EMAIL_SUBJECT)
-                ->setFrom($email)
-                ->setTo(WEBMASTER_EMAIL)
+                ->setSubject('Email from charliebreval.com')
+                ->setFrom('bonjour@charliebreval.com')
+                ->setTo('charliebreval@yahoo.fr')
                 ->setBody($body,'text/html')
             ;
             $mailStatus = $this->get('mailer')->send($message);
