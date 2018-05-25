@@ -10,7 +10,7 @@ namespace AdminBundle\Repository;
  */
 class PaintingRepository extends \Doctrine\ORM\EntityRepository
 {
-    const NB_ELEM_PAGE = 25;
+    const NB_ELEM_PAGE = 15;
 
     public function getPaintings ($page, $isCount = false) {
 
