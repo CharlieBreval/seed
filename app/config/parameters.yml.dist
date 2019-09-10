@@ -33,6 +33,3 @@ parameters:
             - route: app_blog_index
               label: Blog
               big_letter: B
-            - route: app_contact
-              label: Contact
-              big_letter: C

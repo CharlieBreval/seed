@@ -1,41 +1,35 @@
 app_home:
-    path:      /{_locale}
-    defaults:  { _controller: AppBundle:Home:index, _locale: fr}
-    requirements:
-        _locale: en|fr
+  path: /{_locale}
+  defaults: { _controller: AppBundle:Home:index, _locale: fr }
+  requirements:
+    _locale: en|fr
 
 app_gallery:
-    path:     /{_locale}/gallery/{page}
-    defaults: { _controller: AppBundle:Gallery:index, page: 1 }
-    requirements:
-        _locale: en|fr
+  path: /{_locale}/gallery/{page}
+  defaults: { _controller: AppBundle:Gallery:index, page: 1 }
+  requirements:
+    _locale: en|fr
 
 app_blog_index:
-    path:     /{_locale}/blog
-    defaults: { _controller: AppBundle:Blog:index }
-    requirements:
-        _locale: en|fr
+  path: /{_locale}/blog
+  defaults: { _controller: AppBundle:Blog:index }
+  requirements:
+    _locale: en|fr
 
 app_about:
-    path:     /{_locale}/about-me
-    defaults: { _controller: AppBundle:About:index }
-    requirements:
-        _locale: en|fr
+  path: /{_locale}/about-me
+  defaults: { _controller: AppBundle:About:index }
+  requirements:
+    _locale: en|fr
 
 app_videos:
-    path:     /{_locale}/videos
-    defaults: { _controller: AppBundle:Video:index }
-    requirements:
-        _locale: en|fr
-
-app_contact:
-    path:     /{_locale}/contact
-    defaults: { _controller: AppBundle:Contact:index }
-    requirements:
-        _locale: en|fr
+  path: /{_locale}/videos
+  defaults: { _controller: AppBundle:Video:index }
+  requirements:
+    _locale: en|fr
 
 app_blog_show:
-    path:     /{_locale}/blog/{slug}
-    defaults: { _controller: AppBundle:Blog:show }
-    requirements:
-        _locale: en|fr
+  path: /{_locale}/blog/{slug}
+  defaults: { _controller: AppBundle:Blog:show }
+  requirements:
+    _locale: en|fr
